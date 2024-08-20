@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = process.env.FAKE_STORE_BASE_URL
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_FAKE_STORE_BASE_URL
 
 export const axiosGet = async (url: string) => {
   const data = await axios.get(url)

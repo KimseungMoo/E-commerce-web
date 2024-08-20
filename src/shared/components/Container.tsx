@@ -1,4 +1,4 @@
-import Header from "@/app/components/header/Header";
+import Header from "@/app/components/header/components/Header";
 import { ChildrenProps } from "../interface";
 import Layout from "./Layout";
 

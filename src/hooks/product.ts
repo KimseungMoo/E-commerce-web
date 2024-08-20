@@ -26,3 +26,7 @@ export const getProductItem = async (id: string): Promise<ProductType> => {
   const {data} = await axiosGet(`/products/${id}`)
   return data
 }
+export const getCategories = async (): Promise<Array<string>> => {
+  const {data} = await axiosGet('/products/categories')
+  return data
+}

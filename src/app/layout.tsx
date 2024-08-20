@@ -7,14 +7,7 @@ import { SearchProvider } from "@/context/SearchContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState } from "react";
-
-// export const metadata: Metadata = {
-//   title: 'W 쇼핑몰',
-//   description: 'W 쇼핑몰에 오신 것을 환영합니다',
-//   icons: {
-//     icon: '/letter-w.png'
-//   }
-// }
+import { CartProvider } from "@/context/CartContext";
 
 export default function RootLayout({
   children,
@@ -30,12 +23,16 @@ export default function RootLayout({
   }))
   return (
     <html lang="en">
+      <title>W 쇼핑몰</title>
+      <link rel="icon" href="/letter-w.png" />
       <body>
         <SearchProvider>
-          <QueryClientProvider client={queryClient}>
-            {children}
-            <ReactQueryDevtools initialIsOpen={false} />
-          </QueryClientProvider>
+          <CartProvider>
+            <QueryClientProvider client={queryClient}>
+              {children}
+              <ReactQueryDevtools initialIsOpen={false} />
+            </QueryClientProvider>
+          </CartProvider>
         </SearchProvider>
       </body>
     </html>
