@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest --coverage",
+    "build": "npm run prebuild && next build",
+    "prebuild": "npm test"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",

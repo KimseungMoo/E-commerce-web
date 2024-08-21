@@ -17,6 +17,14 @@ interface ProductPageProps {
   }
 }
 
+const defaultProduct: ProductType = {
+  id: 0,
+  title: '',
+  image: '',
+  price: '0',
+  description: ''
+};
+
 // export async function generateStaticParams() {
 //   const list = await getAllProductList()
 //   return list?.map((x: ProductType) => ({
@@ -48,10 +56,10 @@ const ProductItem = (
         {isLoading || isFetching ? <Loading /> : (
           <Product>
             <Product.Left>
-              <ProductImage image={data?.image} />
+              <ProductImage image={data?.image || ''} />
             </Product.Left>
             <Product.Right>
-              <ProductInfo item={data} />
+              <ProductInfo item={data || defaultProduct} />
             </Product.Right>
           </Product>
         )}

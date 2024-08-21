@@ -5,7 +5,7 @@ import { render, fireEvent } from "@testing-library/react";
 const dummy = {
   "id": 1,
   "title": "Solid Gold Petite Micropave ",
-  "price": 168,
+  "price": '168',
   "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
   "category": "jewelery",
   "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
