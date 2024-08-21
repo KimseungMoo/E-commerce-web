@@ -2,6 +2,28 @@ import { useSearchContext } from "@/context/SearchContext";
 import { ChildrenProps } from "@/shared/interface";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import styled from '@emotion/styled'
+import { useCartContext } from "@/context/CartContext";
+
+const ItemDiv = styled.div<{isSelected: boolean}>`
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  span {
+    color: black;
+  }
+  ${({isSelected}) => isSelected && `
+    background-color: rgb(96 165 250);
+    span {
+      color: white;
+    }
+  `}
+  @media (max-width: 1024px) {
+    background-color: initial;
+    span {
+      color: black;
+    }
+  }
+`
 
 const Category = ({children}: ChildrenProps) => {
   return (
@@ -17,7 +39,12 @@ interface Props extends ChildrenProps {
 
 const Item = ({children, category}: Props) => {
   const {category: _category} = useSearchContext()
+  const {setIsOpen} = useCartContext()
   const [isSelected, setIsSelected] = useState(false)
+
+  const onClick = () => {
+    setIsOpen(prev => !prev)
+  }
 
   useEffect(() => {
     setIsSelected(category === _category)
@@ -28,11 +55,14 @@ const Item = ({children, category}: Props) => {
 
   return (
     <li className="list-none">
-      <Link href={`/?category=${category}`}
+      <Link href={`/?category=${category}`} onClick={onClick}
       >
-        <div className={`p-2 hover:bg-blue-50 rounded-md ${selectedClassName}`}>
+        {/* <div className={`p-2 hover:bg-blue-50 rounded-md ${selectedClassName}`}>
           <span className={`font-roboto text-black ${selectedTextClassName}`}>{children}</span>
-        </div>
+        </div> */}
+        <ItemDiv isSelected={isSelected}>
+          <span>{children}</span>
+        </ItemDiv>
       </Link>
     </li>
   )

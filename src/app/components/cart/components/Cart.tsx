@@ -7,13 +7,24 @@ import {
   TableBody,
   Button,
 } from "@mui/material"
+import styled from '@emotion/styled'
+
+const CartDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  gap: 1.25rem;
+  @media (max-width: 1024px) {
+    padding: 2rem;
+  }
+`
 
 const Cart = ({children}: ChildrenProps) => {
-  return <div className="flex flex-col gap-5 px-20 py-20">{children}</div>
+  return <CartDiv>{children}</CartDiv>
 }
 
 const Title = ({children}: ChildrenProps) => {
-  return <div className="text-2xl font-bold">Product ({children})</div>
+  return <div className="text-2xl font-bold" data-testid='cart-count'>Product ({children})</div>
 }
 
 const TableWrapper = ({children}: ChildrenProps) => {

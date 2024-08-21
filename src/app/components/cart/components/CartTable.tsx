@@ -92,7 +92,7 @@ const CartTable = () => {
         </Cart.TableCell>
         <Cart.TableCell>{c.price}</Cart.TableCell>
         <Cart.TableCell>
-          <DeleteIcon className='cursor-pointer' onClick={() => onRemoveItem(c.id!, setData, setCount, setCartData, data!)} />
+          <DeleteIcon className='cursor-pointer' data-testid='remove-button' onClick={() => onRemoveItem(c.id!, setData, setCount, setCartData, data!)} />
         </Cart.TableCell>
       </Cart.TableRow>
     )

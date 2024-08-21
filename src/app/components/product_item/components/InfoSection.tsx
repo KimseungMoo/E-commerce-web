@@ -1,10 +1,18 @@
 import { ChildrenProps } from "@/shared/interface"
 import { ProductType } from "../../product_list/interface"
+import styled from '@emotion/styled'
 
+const InfoSectionDiv = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  @media (max-width: 1024px) {
+    flex-direction: column
+  }
+`
 
 const InfoSection = ({children}: ChildrenProps) => {
 
-  return <div className="flex gap-3">{children}</div>
+  return <InfoSectionDiv>{children}</InfoSectionDiv>
 }
 
 const Label = ({children}: ChildrenProps) => {

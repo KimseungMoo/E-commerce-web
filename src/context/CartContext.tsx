@@ -6,11 +6,15 @@ import { ChildrenProps } from "@/shared/interface"
 interface ICartContext {
   count: number | undefined
   setCount: Dispatch<SetStateAction<number | undefined>>
+  isOpen: boolean | undefined
+  setIsOpen: Dispatch<SetStateAction<boolean | undefined>>
 }
 
 export const CartContext = createContext<ICartContext | null>({
   count: 0,
-  setCount: () => {}
+  setCount: () => {},
+  isOpen: false,
+  setIsOpen: () => {}
 })
 
 export const useCartContext = () => {
@@ -21,12 +25,15 @@ export const useCartContext = () => {
 
 export const CartProvider = ({children}: ChildrenProps) => {
   const [count, setCount] = useState<number | undefined>()
+  const [isOpen, setIsOpen] = useState<boolean | undefined>()
 
   return (
     <CartContext.Provider
       value={{
         count,
-        setCount
+        setCount,
+        isOpen,
+        setIsOpen
       }}
     >
       {children}

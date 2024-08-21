@@ -4,7 +4,16 @@ import Category from "./Category"
 import { useEffect } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { CategoryEnum } from "../../product_list/interface"
+import styled from '@emotion/styled'
 
+const CategoriesWrapper = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+`
 
 const Categories = () => {
   const {category, setCategory} = useSearchContext()
@@ -23,7 +32,7 @@ const Categories = () => {
   }, [categoryParams])
   
   return (
-    <div className="flex gap-3">
+    <CategoriesWrapper>
       {category_list?.map(c => (
         <Category.Item
           key={c?.id}
@@ -32,7 +41,7 @@ const Categories = () => {
           {c?.value}
         </Category.Item>
       ))}
-    </div>
+    </CategoriesWrapper>
   )
 }
 

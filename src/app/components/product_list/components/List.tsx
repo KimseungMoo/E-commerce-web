@@ -1,20 +1,42 @@
 import { ChildrenProps } from "@/shared/interface";
 import Link from "next/link";
+import styled from '@emotion/styled'
 
+const ListMain = styled.main`
+  width: 100%;
+  display: flex;
+  padding: 0 5rem;
+  @media (max-width: 1024px) {
+    padding: 0 2rem;
+  }
+`
+
+const ContentSection = styled.section`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (max-width: 1024px) {
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+`
 
 const List = ({children}: ChildrenProps) => {
   return (
-    <main className="w-full flex px-20">
+    <ListMain>
       {children}
-    </main>
+    </ListMain>
   )
 }
 
 const Content = ({children}: ChildrenProps) => {
   return (
-    <section className="w-full items-center justify-center gap-10  grid grid-cols-3">
+    <ContentSection>
       {children}
-    </section>
+    </ContentSection>
   )
 }
 

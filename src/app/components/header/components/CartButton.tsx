@@ -2,7 +2,17 @@ import Link from "next/link"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCartContext } from "@/context/CartContext";
 import { useEffect } from "react";
+import styled from '@emotion/styled'
 
+const CartIcon = styled(ShoppingCartIcon)`
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  @media (max-width: 1024px) {
+    width: 2rem;
+    height: 2rem;
+  }
+`
 
 const CartButton = () => {
   const {count, setCount} = useCartContext()
@@ -16,7 +26,7 @@ const CartButton = () => {
     <div>
       <Link href={'/cart'} className="cursor-default">
         <div className="flex flex-col items-center justify-center">
-          <ShoppingCartIcon fontSize='large' color='action' className="cursor-pointer w-12 h-12" />
+          <CartIcon fontSize='large' color='action'/>
           <span className="text-slate-700">{count}</span>
         </div>
       </Link>
