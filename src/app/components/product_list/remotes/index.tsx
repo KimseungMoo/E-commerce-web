@@ -1,6 +1,6 @@
 import { useSearchContext } from "@/context/SearchContext";
 import { QueryClient, useQuery } from "@tanstack/react-query";
-import { CategoryEnum, ProductListType } from "../interface";
+import { CategoryEnum, ProductType } from "../interface";
 import { AxiosError } from "axios";
 import { getProductList } from "@/hooks/product";
 
@@ -15,7 +15,7 @@ export const getPrefetchProductList = () => {
 
 export const useProductList = () => {
   const {category} = useSearchContext()
-  return useQuery<ProductListType, AxiosError>({
+  return useQuery<ProductType[], AxiosError>({
     queryKey: ['product_list', category],
     queryFn: () => getProductList({category}),
     enabled: !!category

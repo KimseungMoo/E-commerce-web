@@ -10,7 +10,7 @@ const Logo = () => {
           <Image 
             src={LogoImg}
             alt='logo'
-            width={200}
+            width={150}
             // height={80}
             className="cursor-pointer"
           />

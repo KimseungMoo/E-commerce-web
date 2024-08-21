@@ -2,13 +2,13 @@
 
 import Container from "@/shared/components/Container";
 import { NextPage } from "next";
+import ListContent from "./components/product_list/components/ListContent";
 
 const Home: NextPage = () => {
 
   return (
     <Container>
-      <main>
-      </main>
+      <ListContent />
     </Container>
   )
 }

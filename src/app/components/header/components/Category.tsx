@@ -17,11 +17,11 @@ interface Props extends ChildrenProps {
 const Item = ({children, category}: Props) => {
   const {category: _category} = useSearchContext()
   const isSelected = category === _category
-  const selectedClassName = isSelected ? 'bg-blue-300' : ''
+  const selectedClassName = isSelected ? 'bg-blue-400' : ''
   const selectedTextClassName = isSelected ? 'text-white' : ''
   
   return (
-    <li>
+    <li className="list-none">
       <Link href={`?category=${category}`}>
         <div className={`p-2 hover:bg-blue-50 ${selectedClassName}`}>
           <a className={`font-roboto text-black ${selectedTextClassName}`}>{children}</a>

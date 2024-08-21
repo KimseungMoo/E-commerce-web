@@ -8,9 +8,9 @@ export interface ProductType {
   image?: string
 }
 
-export interface ProductListType {
-  list: ProductType[]
-}
+// export interface ProductListType {
+//   list: ProductType[]
+// }
 export enum CategoryEnum {
   electronics = "electronics",
   jewelery = "jewelery",

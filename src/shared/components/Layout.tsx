@@ -23,8 +23,8 @@ const LayoutWrapper = styled.div`
 `
 const LayoutItem = styled.div`
   width: 100%;
-  height: 100%;
-  background: white;
+  // height: 100%;
+  // background: white;
 `
 
 const Layout = ({children}: ChildrenProps) => {

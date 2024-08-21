@@ -1,4 +1,4 @@
-import { ProductListType, ProductType } from "@/app/components/product_list/interface"
+import { ProductType } from "@/app/components/product_list/interface"
 import { axiosGet } from "@/remotes/axios"
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 export const getProductList = async ({
   // keyword,
   category
-}: Props): Promise<ProductListType> => {
+}: Props): Promise<ProductType[]> => {
   const baseQuery = '/products'
   let url = `${baseQuery}/category/${category}`
 
@@ -17,7 +17,7 @@ export const getProductList = async ({
   return data
 }
 
-export const getAllProductList = async (): Promise<ProductListType> => {
+export const getAllProductList = async (): Promise<ProductType[]> => {
   const url = '/products'
   const {data} = await axiosGet(url)
   return data
