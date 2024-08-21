@@ -41,18 +41,22 @@ const ProductItem = (
   // console.log(isLoading, isFetching)
 
   return (
-    <Container>
-      {isLoading || isFetching ? <Loading /> : (
-        <Product>
-          <Product.Left>
-            <ProductImage image={data?.image} />
-          </Product.Left>
-          <Product.Right>
-            <ProductInfo item={data} />
-          </Product.Right>
-        </Product>
-      )}
-    </Container>
+    <>
+      <title>{data?.title}</title>
+      <meta name='description' content={data?.description} />
+      <Container>
+        {isLoading || isFetching ? <Loading /> : (
+          <Product>
+            <Product.Left>
+              <ProductImage image={data?.image} />
+            </Product.Left>
+            <Product.Right>
+              <ProductInfo item={data} />
+            </Product.Right>
+          </Product>
+        )}
+      </Container>
+    </>
   )
 }
 

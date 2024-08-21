@@ -21,7 +21,7 @@ const AddButton = ({item}: Props) => {
     } else {
       localStorage.setItem('cart', JSON.stringify([...res, item]))
       setCount!(res.length + 1)
-      router.push('/cart')
+      // router.push('/cart')
     }
   }
   
@@ -31,7 +31,7 @@ const AddButton = ({item}: Props) => {
       variant='contained'
       onClick={onClick}
     >
-      장바구니 담기
+      Add to Cart
     </Button>
   )
 }

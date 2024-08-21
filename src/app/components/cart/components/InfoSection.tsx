@@ -7,9 +7,17 @@ interface Props {
 
 const InfoSection = ({item}: Props) => {
   return (
-    <div>
-      <Image src={item?.image ?? ''} width={100} height={150} alt='tableProductImg'/>
-      <span>{item?.title}</span>
+    <div className="flex items-center gap-4">
+      <div className="relative w-20 h-36">
+        <Image 
+          src={item?.image ?? ''} 
+          // width={100} 
+          // height={150} 
+          alt='tableProductImg'
+          layout="fill"
+        />
+      </div>
+      <span className="text-black">{item?.title}</span>
     </div>
   )
 }

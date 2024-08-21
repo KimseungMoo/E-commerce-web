@@ -22,7 +22,7 @@ const Loading = () => {
       <CssBaseline />
       <Wrapper>
         <CircularProgress />
-        <Text>Loading...</Text>
+        {/* <Text>Loading...</Text> */}
       </Wrapper>
     </>
   )

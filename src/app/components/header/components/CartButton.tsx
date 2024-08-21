@@ -4,7 +4,7 @@ import { useCartContext } from "@/context/CartContext";
 import { useEffect } from "react";
 
 
-const Cart = () => {
+const CartButton = () => {
   const {count, setCount} = useCartContext()
 
   useEffect(() => {
@@ -15,15 +15,13 @@ const Cart = () => {
   return (
     <div>
       <Link href={'/cart'} className="cursor-default">
-        <div>
-          <a className="flex flex-col items-center justify-center">
-            <ShoppingCartIcon fontSize='large' color='action' className="cursor-pointer w-12 h-12" />
-            <span className="text-slate-700">{count}</span>
-          </a>
+        <div className="flex flex-col items-center justify-center">
+          <ShoppingCartIcon fontSize='large' color='action' className="cursor-pointer w-12 h-12" />
+          <span className="text-slate-700">{count}</span>
         </div>
       </Link>
     </div>
   )
 }
 
-export default Cart
+export default CartButton

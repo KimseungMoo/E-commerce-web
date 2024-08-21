@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const List = ({children}: ChildrenProps) => {
   return (
-    <main className="w-full flex pl-10 pr-10">
+    <main className="w-full flex px-20">
       {children}
     </main>
   )
@@ -27,7 +27,7 @@ const Item = ({children, id}: ItemProps) => {
     <li className="list-none bg-slate-50 py-5 rounded-lg">
       <Link href={`/product/${id}`}>
         <div className="flex items-center justify-center">
-          <a className="w-80 h-full flex flex-col items-center justify-between gap-5">{children}</a>
+          <span className="w-80 h-full flex flex-col items-center justify-between gap-5">{children}</span>
         </div>
       </Link>
     </li>

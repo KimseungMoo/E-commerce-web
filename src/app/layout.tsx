@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <title>W 쇼핑몰</title>
+      <meta name='description' content='다양한 상품을 판매하는 W 쇼핑몰입니다.' />
       <link rel="icon" href="/letter-w.png" />
       <body>
         <SearchProvider>

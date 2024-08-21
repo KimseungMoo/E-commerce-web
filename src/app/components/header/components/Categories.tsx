@@ -1,5 +1,3 @@
-"use client"
-
 import { useSearchContext } from "@/context/SearchContext"
 import { category_list } from "../data/category_list"
 import Category from "./Category"

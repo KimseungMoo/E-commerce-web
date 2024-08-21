@@ -9,11 +9,11 @@ import {
 } from "@mui/material"
 
 const Cart = ({children}: ChildrenProps) => {
-  return <div>{children}</div>
+  return <div className="flex flex-col gap-5 px-20 py-20">{children}</div>
 }
 
 const Title = ({children}: ChildrenProps) => {
-  return <div>장바구니 ({children})</div>
+  return <div className="text-2xl font-bold">Product ({children})</div>
 }
 
 const TableWrapper = ({children}: ChildrenProps) => {

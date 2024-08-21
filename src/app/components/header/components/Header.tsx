@@ -1,4 +1,4 @@
-import Cart from "./Cart"
+import CartButton from "./CartButton"
 import Categories from "./Categories"
 import Logo from "./Logo"
 
@@ -11,7 +11,7 @@ const Header = () => {
       {/* 카테고리 */}
       <Categories />
       {/* 장바구니 */}
-      <Cart />
+      <CartButton />
     </header>
   )
 }
