@@ -1,3 +1,5 @@
+"use client"
+
 import { createContext, Dispatch, SetStateAction, useContext, useState } from "react"
 import { ChildrenProps } from "@/shared/interface"
 

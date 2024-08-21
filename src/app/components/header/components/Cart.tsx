@@ -7,17 +7,18 @@ import { useEffect } from "react";
 const Cart = () => {
   const {count, setCount} = useCartContext()
 
-  // useEffect(() => {
-
-  // }, [setCount])
+  useEffect(() => {
+    const itemCount = JSON.parse(localStorage.getItem('cart')!) || []
+    setCount!(itemCount.length)
+  }, [setCount])
 
   return (
     <div>
       <Link href={'/cart'} className="cursor-default">
         <div>
-          <a>
+          <a className="flex flex-col items-center justify-center">
             <ShoppingCartIcon fontSize='large' color='action' className="cursor-pointer w-12 h-12" />
-            {/* <span>{count}</span> */}
+            <span className="text-slate-700">{count}</span>
           </a>
         </div>
       </Link>

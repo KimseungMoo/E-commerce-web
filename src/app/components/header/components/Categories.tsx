@@ -13,11 +13,11 @@ const Categories = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
   const categoryParams = searchParams.get('category')
-  // console.log(category)
+  // console.log(category, categoryParams)
   useEffect(() => {
     if (categoryParams) {
       setCategory(categoryParams)
-    } else {
+    } else if (!category) {
       const params = new URLSearchParams(searchParams.toString())
       params.set('category', CategoryEnum.electronics)
       router.push(`/?${params.toString()}`)

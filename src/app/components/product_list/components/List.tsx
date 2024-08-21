@@ -24,10 +24,10 @@ interface ItemProps extends ChildrenProps {
 
 const Item = ({children, id}: ItemProps) => {
   return (
-    <li className="list-none">
+    <li className="list-none bg-slate-50 py-5 rounded-lg">
       <Link href={`/product/${id}`}>
         <div className="flex items-center justify-center">
-          <a className="w-80 flex flex-col items-center justify-between gap-5">{children}</a>
+          <a className="w-80 h-full flex flex-col items-center justify-between gap-5">{children}</a>
         </div>
       </Link>
     </li>
@@ -35,11 +35,11 @@ const Item = ({children, id}: ItemProps) => {
 }
 
 const Info = ({children}: ChildrenProps) => {
-  return <div className="w-fit h-28 flex flex-col gap-2">{children}</div>
+  return <div className="w-fit flex flex-col gap-2">{children}</div>
 }
 
 const Thumbnail = ({children}: ChildrenProps) => {
-  return <div className="relative w-20 h-48">{children}</div>
+  return <div className="relative w-full h-48">{children}</div>
 }
 
 const Title = ({children}: ChildrenProps) => {
