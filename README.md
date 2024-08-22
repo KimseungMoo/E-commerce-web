@@ -8,6 +8,7 @@
 - 프로그래밍 언어: JavaScript, TypeScript
 - 프레임워크 및 라이브러리: Next.js, React-Query, Context API
 - 테스트: Jest
+- 배포: GitHub Pages
 - 스타일링: TailwindCSS, styled-components
 
 ## 프로젝트 목표
@@ -17,8 +18,9 @@
 - 선언적 컴포넌트 구성: 가독성과 유지보수를 높이는 코드 작성
 
 ## 설계 내용
-1. Compound Component 패턴: Props Drilling을 최소화하고 선언적 컴포넌트 구성을 실현
+1. Compound Component 패턴: Props Drilling을 최소화하고 선언적 컴포넌트 구성
 2. 폴더 구조 설계: 지역성 원칙을 적용해 코드 가독성과 관리 용이성을 향상
+3. Next.js 도입: SEO와 이미지 최적화
 
 
 ## 기능
