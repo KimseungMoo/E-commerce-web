@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# W 쇼핑몰
 
-## Getting Started
+다양한 상품을 판매하는 W 쇼핑몰입니다.
 
-First, run the development server:
+## 사용 기술
+- 프로그래밍 언어: JavaScript, TypeScript
+- 프레임워크 및 라이브러리: Next.js, React-Query, Context API
+- 테스트: Jest
+- 스타일링: TailwindCSS, styled-components
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 프로젝트 목표
+- 효율적인 컴포넌트 설계: 재사용성과 유지보수를 고려한 컴포넌트 구조
+- 이미지 최적화: 빠르고 원활한 사용자 경험을 위한 이미지 최적화
+- 사용자 경험 개선: 직관적이고 반응성이 뛰어난 UI/UX 제공
+- 선언적 컴포넌트 구성: 가독성과 유지보수를 높이는 코드 작성
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 설계 내용
+1. Compound Component 패턴: Props Drilling을 최소화하고 선언적 컴포넌트 구성을 실현
+2. 폴더 구조 설계: 지역성 원칙을 적용해 코드 가독성과 관리 용이성을 향상
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 기능
+- 메인
 
-## Learn More
+https://github.com/user-attachments/assets/e65a89d5-8957-4905-8345-81f770d87d6e
 
-To learn more about Next.js, take a look at the following resources:
+- 상세
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://github.com/user-attachments/assets/a52d9458-71b5-4a16-b502-f88a21c39244
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 장바구니
+  
+https://github.com/user-attachments/assets/b31fba8d-81e4-4ffc-8ac6-ed4a3fb7dea8
 
-## Deploy on Vercel
+- 반응형 메뉴
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://github.com/user-attachments/assets/b3a8762a-d9eb-4f33-a08b-58b171975f29
