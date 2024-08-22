@@ -1,4 +1,4 @@
-import { render, fireEvent, cleanup, screen } from "@testing-library/react";
+import { render, fireEvent, cleanup, screen, act } from "@testing-library/react";
 import Cart from '@/app/cart/page'
 import mockRouter from 'next-router-mock';
 
@@ -76,31 +76,41 @@ describe('장바구니 페이지 테스트', () => {
       removeButton
     }
   }
-  test('전체 선택 체크박스 클릭 후 삭제', () => {
+  test('전체 선택 체크박스 클릭 후 삭제', async () => {
     jest.spyOn(Object.getPrototypeOf(window.localStorage), 'setItem')
     window.localStorage.setItem('cart', JSON.stringify(dummy))
     const {allSelectedCheckbox, selectedItemButton} = setup()
-    fireEvent.click(allSelectedCheckbox) // 전체 선택 체크박스 클릭
+    await act(async () => {
+      fireEvent.click(allSelectedCheckbox) // 전체 선택 체크박스 클릭
+    })
     expect(allSelectedCheckbox).toBeChecked() // 전체 선택 체크박스 클릭 확인
-
-    fireEvent.click(selectedItemButton) // 삭제 버튼 클릭
+    await act(async () => {
+      fireEvent.click(selectedItemButton) // 삭제 버튼 클릭
+    })
     const cartCount = screen.getByTestId('cart-count')
     expect(cartCount).toHaveTextContent('Product (0)')
   })
 
-  test('체크박스 테스트(단일 선택, 다중 선택)', () => {
+  test('체크박스 테스트(단일 선택, 다중 선택)', async () => {
     jest.spyOn(Object.getPrototypeOf(window.localStorage), 'setItem')
     window.localStorage.setItem('cart', JSON.stringify(dummy)) // 아이템 4개 mocking
     const {cartRow, removeButton, selectedItemButton} = setup()
-    fireEvent.click(removeButton[0]) // 첫번째 아이템 삭제
+    await act(async () => {
+      fireEvent.click(removeButton[0]) // 첫번째 아이템 삭제
+    })
+    
     const restCartRow = screen.getAllByTestId('cart-row')
     expect(restCartRow.length).toBe(3)
     expect(cartRow[0]).not.toBeInTheDocument() // 첫번째 아이템 삭제 확인
 
     const row = screen.getByLabelText('table-row-checkbox-4') // 마지막 아이템 (id=4)
-    fireEvent.click(row) // 마지막 아이템 선택
+    await act(async () => {
+      fireEvent.click(row) // 마지막 아이템 선택
+    })
     expect(row).toBeChecked() // 마지막 아이템 선택 확인
-    fireEvent.click(selectedItemButton) // 선택된 아이템 삭제
+    await act(async () => {
+      fireEvent.click(selectedItemButton) // 선택된 아이템 삭제
+    })
     const restCartRow2 = screen.getAllByTestId('cart-row')
     expect(restCartRow2.length).toBe(2)
   })
