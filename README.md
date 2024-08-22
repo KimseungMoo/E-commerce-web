@@ -2,6 +2,8 @@
 
 다양한 상품을 판매하는 W 쇼핑몰입니다.
 
+[배포 링크](https://kimseungmoo.github.io/E-commerce-web/)
+
 ## 사용 기술
 - 프로그래밍 언어: JavaScript, TypeScript
 - 프레임워크 및 라이브러리: Next.js, React-Query, Context API
