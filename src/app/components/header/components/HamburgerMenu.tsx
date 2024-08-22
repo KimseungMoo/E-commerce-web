@@ -1,5 +1,6 @@
+"use client"
+
 import styled from '@emotion/styled'
-import { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Categories from './Categories'

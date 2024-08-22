@@ -1,3 +1,5 @@
+"use client"
+
 import { useSearchContext } from "@/context/SearchContext";
 import { ChildrenProps } from "@/shared/interface";
 import Link from "next/link";

@@ -1,3 +1,5 @@
+"use client"
+
 import Divider from "@/shared/components/Divider"
 import { ProductType } from "../../product_list/interface"
 import InfoSection from "./InfoSection"
