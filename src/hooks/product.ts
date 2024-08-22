@@ -30,3 +30,16 @@ export const getCategories = async (): Promise<Array<string>> => {
   const {data} = await axiosGet('/products/categories')
   return data
 }
+export const fetchAllProductList = async (): Promise<ProductType[]> => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_FAKE_STORE_BASE_URL}/products`)
+  const data = res.json()
+
+  return data
+}
+
+export const fetchProductItem = async (id: string): Promise<ProductType> => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_FAKE_STORE_BASE_URL}/products/${id}`)
+  const data = res.json()
+
+  return data
+}

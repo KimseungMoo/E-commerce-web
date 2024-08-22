@@ -1,3 +1,5 @@
+"use client"
+
 import CartButton from "./CartButton"
 import Categories from "./Categories"
 import HamburgerMenu from "./HamburgerMenu"

@@ -1,3 +1,5 @@
+"use client"
+
 import { Divider as DividerLine } from "@mui/material";
 
 interface Props {

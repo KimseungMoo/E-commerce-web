@@ -1,3 +1,5 @@
+"use client"
+
 import { blurImageUrl } from "@/shared/data/url"
 import Image from "next/image"
 

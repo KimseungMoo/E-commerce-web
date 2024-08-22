@@ -1,3 +1,5 @@
+"use client"
+
 import { ChildrenProps } from "@/shared/interface"
 import { ProductType } from "../../product_list/interface"
 import styled from '@emotion/styled'

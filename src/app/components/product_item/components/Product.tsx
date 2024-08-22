@@ -1,3 +1,5 @@
+"use client"
+
 import { ChildrenProps } from "@/shared/interface";
 import styled from '@emotion/styled'
 

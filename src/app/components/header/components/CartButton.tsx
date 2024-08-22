@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCartContext } from "@/context/CartContext";

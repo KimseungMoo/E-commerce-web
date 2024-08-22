@@ -1,7 +1,9 @@
+"use client"
+
 import { useCartContext } from "@/context/CartContext"
 import { Button } from "@mui/material"
 import { ProductType } from "../../product_list/interface"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 
 interface Props {
   item: ProductType
@@ -10,7 +12,7 @@ interface Props {
 const AddButton = ({item}: Props) => {
   const {id, price, title, description, category, image} = item
   const {count, setCount} = useCartContext()
-  const router = useRouter()
+  // const router = useRouter()
 
   const onClick = () => {
     const res = JSON.parse(localStorage.getItem('cart')!) || []
