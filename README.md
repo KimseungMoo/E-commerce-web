@@ -21,16 +21,22 @@
 
 ## 기능
 - 메인
-<img width="1457" alt="스크린샷 2024-08-22 오전 12 23 50" src="https://github.com/user-attachments/assets/66cb7c86-2373-4c1a-b9c7-44e158861ac9">
+
+https://github.com/user-attachments/assets/e65a89d5-8957-4905-8345-81f770d87d6e
 
 - 상세
-<img width="1457" alt="스크린샷 2024-08-22 오전 12 22 47" src="https://github.com/user-attachments/assets/158f73a9-87fa-4827-960c-21952d429a8d">
+
+https://github.com/user-attachments/assets/a52d9458-71b5-4a16-b502-f88a21c39244
 
 - 장바구니
-<img width="1457" alt="스크린샷 2024-08-22 오전 12 23 34" src="https://github.com/user-attachments/assets/4115feb3-e2b2-4098-a721-4353873839eb">
+  
+https://github.com/user-attachments/assets/b31fba8d-81e4-4ffc-8ac6-ed4a3fb7dea8
 
 - 반응형 메뉴
-  
-<img width="447" alt="스크린샷 2024-08-22 오전 12 24 17" src="https://github.com/user-attachments/assets/ccfd6698-baca-4f4b-a3a7-d17f487d2ee9">
-<img width="447" alt="스크린샷 2024-08-22 오전 12 24 22" src="https://github.com/user-attachments/assets/7f685ab1-7b31-4e64-a0cb-6f52f8f59782">
+
+https://github.com/user-attachments/assets/b3a8762a-d9eb-4f33-a08b-58b171975f29
+
+
+
+
 
